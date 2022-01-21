@@ -1,7 +1,11 @@
 import React from 'react';
 
 const SideBar = () => {
-  return <div></div>;
+  return (
+    <aside className="sidebar">
+      
+    </aside>
+  )
 };
 
 export default SideBar;
