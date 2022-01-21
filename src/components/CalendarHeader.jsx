@@ -1,3 +1,4 @@
+import dayjs from 'dayjs';
 import React, { useContext } from 'react';
 import GlobalContext from '../Context/GlobalContext';
 
@@ -9,11 +10,11 @@ const CalendarHeader = () => {
 
     const handleNextNonth = () => setMonthIndex(monthIndex + 1);
 
-    const handleCurrentMonth = () => {}
+    const handleReset = () => setMonthIndex(dayjs().month());
     return (
         <header className='calendar_header'>
             <h1>Calendar</h1>
-            <button className='today_btn' onClick={handleCurrentMonth}>
+            <button className='today_btn' onClick={handleReset}>
                 Today
             </button>
             <button onClick={handlePrevMont}>
@@ -26,6 +27,9 @@ const CalendarHeader = () => {
                     chevron_right
                 </span>
             </button>
+            <h2>
+                {dayjs(new Date(dayjs().year(), monthIndex)).format('MMMM YYYY')}
+            </h2>
         </header>
     )
 };
