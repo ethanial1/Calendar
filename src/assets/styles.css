@@ -1,0 +1,35 @@
+.container {
+    display: flex;
+    flex: 1 1 0%;
+}
+
+.container_month {
+    flex: 1 1 0%;
+    display: grid;
+    grid-template-columns: repeat(7,minmax(0,1fr));
+    grid-template-rows: repeat(5,minmax(0,1fr));
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    border-width: 1px;
+    border-color: gray;
+}
+
+.day > header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.day > header > p {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    margin-top: .25rem;
+}
+
+.day > header > p:nth-child(2) {
+    text-align: center;
+    padding: .25rem;
+}
