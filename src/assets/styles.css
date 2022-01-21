@@ -14,7 +14,9 @@
     display: flex;
     flex-direction: column;
     border-width: 1px;
-    border-color: gray;
+    border-color: rgba(128, 128, 128, 0.555);
+    opacity: 1;
+    border-style: solid;
 }
 
 .day > header {
@@ -28,8 +30,42 @@
     line-height: 1.25rem;
     margin-top: .25rem;
 }
-
+.day > header > p:nth-child(1) {
+    margin-top: .35rem;
+}
 .day > header > p:nth-child(2) {
     text-align: center;
     padding: .25rem;
+}
+
+.current_day {
+    color: #fff;
+    width: 1.75rem;
+    text-align: center;
+    border-radius: 9999px;
+    background-color: rgb(13, 83, 175);
+}
+
+.calendar_header {
+    display: flex;
+    align-items: center;
+    padding: .5rem 1rem .5rem 1rem;
+}
+
+
+
+.calendar_header > h1 {
+    margin-right: 2.5rem;
+}
+
+.today_btn {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(128, 128, 128, 0.555);
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: .25rem;
+    margin-right: 1.25rem;
 }
